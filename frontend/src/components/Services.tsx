@@ -29,15 +29,13 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-red-50 relative overflow-hidden">
-        {/* Background decorative curve */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white rounded-l-full opacity-50 -z-10 translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#991B1B] mb-2">What We Do</h2>
-          <h3 className="text-3xl font-light text-[#991B1B]">
-            For Your <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Business</span>
-          </h3>
+          <h2 className="text-3xl font-light text-[#991B1B]">
+           Our <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Advantages</span>
+          </h2>
         </div>
 
         <div 
@@ -62,15 +60,6 @@ const Services = () => {
           ))}
         </div>
         
-        {/* Slider Controls */}
-        <div className="flex justify-center mt-4 gap-4">
-            <button onClick={() => scroll('left')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
-                <ChevronLeft size={24} />
-            </button>
-            <button onClick={() => scroll('right')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
-                <ChevronRight size={24} />
-            </button>
-        </div>
       </div>
     </section>
   );

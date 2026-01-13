@@ -46,12 +46,6 @@ const Footer = () => {
                 className="grayscale opacity-80"
              ></iframe>
              
-             {/* Address Card Overlay */}
-             <div className="absolute top-10 left-10 bg-white text-black p-4 shadow-lg rounded max-w-[12.5rem]">
-                 <h4 className="font-bold">{FOOTER_CONTENT.addressTitle}</h4>
-                 <p className="text-sm text-gray-600">{FOOTER_CONTENT.address}</p>
-                 <a href={FOOTER_CONTENT.mapUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 text-xs mt-1 block">View Larger Map</a>
-             </div>
           </div>
         </div>
       </div>

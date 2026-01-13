@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef, useEffect } from 'react';
+// import { ChevronLeft, ChevronRight } from 'lucide-react'; // Unused
 import { RECENT_WORK } from '../constants';
 
 const Portfolio = () => {
@@ -8,14 +8,28 @@ const Portfolio = () => {
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
         const { current } = scrollRef;
-        const scrollAmount = current.offsetWidth / 2; // Scroll half screen width
+        const scrollAmount = current.offsetWidth; // Scroll full width or card width
         if (direction === 'left') {
             current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         } else {
-            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            // Check if we are at the end
+            if (current.scrollLeft + current.clientWidth >= current.scrollWidth - 10) {
+                 current.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                 current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         }
     }
   };
+
+  // Auto scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+        scroll('right');
+    }, 5000); // Scroll every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="py-20 bg-[#FEF2F2]">
@@ -23,18 +37,12 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
                 <h2 className="text-4xl font-bold text-[#991B1B] mb-2">Our Recent Work</h2>
-                <h3 className="text-3xl font-light text-[#991B1B]">
-                    By Our <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Experts</span>
-                </h3>
             </div>
-            <p className="max-w-md text-gray-600 mt-6 md:mt-0 text-right md:text-left">
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
         </div>
 
         <div 
             ref={scrollRef}
-            className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory"
+            className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scroll-smooth justify-center"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {RECENT_WORK.map((work) => (
@@ -43,27 +51,14 @@ const Portfolio = () => {
                 <img 
                     src={work.image} 
                     alt={work.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0" 
                 />
               </div>
               <div className="flex justify-between items-center px-2">
                 <h4 className="text-xl font-bold text-[#991B1B]">{work.title}</h4>
-                <button className="px-6 py-2 border border-gray-300 rounded-full text-sm font-medium hover:bg-[#991B1B] hover:text-white transition-colors">
-                    View Work
-                </button>
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* Navigation Dots/Buttons */}
-        <div className="flex justify-start mt-4 gap-4">
-             <button onClick={() => scroll('left')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
-                <ChevronLeft size={24} />
-            </button>
-            <button onClick={() => scroll('right')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
-                <ChevronRight size={24} />
-            </button>
         </div>
       </div>
     </section>

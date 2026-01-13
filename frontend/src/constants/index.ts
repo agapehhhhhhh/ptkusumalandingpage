@@ -6,8 +6,8 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_CONTENT = {
-  title: "Menghubungkan Brand dengan Ruang Publik", 
-  subtitle: "Melalui media videotron yang aman, legal, dan terkelola. Kami mendukung kampanye brand lokal maupun nasional dengan penempatan profesional untuk tayangan yang jelas dan mudah diakses.",
+  title: "Penyedia dan Pengelola Media Videotron", 
+  subtitle: "Menjadi partner terpercaya dalam penyediaan media outdoor yang efektif, profesional, dan mudah diakses.",
   buttonText: "HUBUNGI KAMI",
   image: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=2070&auto=format&fit=crop" // Billboard/Outdoor advertising image
 };
@@ -54,24 +54,18 @@ export const TESTIMONIALS = [
 
 export const RECENT_WORK = [
   {
-    title: "Kampanye Brand Nasional",
-    image: "https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2070&auto=format&fit=crop", // Billboard mockup
+    title: "Jl. Naripan No. 22 Kota Bandung",
+    image: "/images/pic1.jpeg", 
   },
   {
-    title: "Promosi Event Kota Bandung",
-    image: "https://images.unsplash.com/photo-1563969986345-3162c69dd5d2?q=80&w=1991&auto=format&fit=crop", // Street crowd
-  },
-  {
-    title: "Corporate Branding BUMN",
-    image: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2076&auto=format&fit=crop", // City lights
+    title: "Jl. Ir. Hj. Djuanda No. 181 Kota Bandung",
+    image: "/images/pic2.jpeg", 
   },
 ];
 
 export const FOOTER_CONTENT = {
   companyName: "PT Kusuma Somantri Putra",
   description: "Penyedia dan Pengelola Media Videotron di Kota Bandung. Menjadi partner terpercaya dalam penyediaan media outdoor yang efektif, profesional, dan mudah diakses.",
-  email: "contact@reallygreatsite.com", // Keeping placeholder from brochure or generic
-  addressTitle: "Kantor Bandung",
-  address: "Jl. Cicalengka 15 No. 2, Kota Bandung",
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.835973717088!2d107.7121283!3d-6.9101887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68dd1ed7b2520d%3A0xe21d4d385a4f7e53!2sJl.%20Cicalengka%20Raya%20No.15%2C%20Antapani%20Kidul%2C%20Kec.%20Antapani%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040291!5e0!3m2!1sen!2sid!4v1705123456789!5m2!1sen!2sid" // Approx location based on address
+  email: "ptkusumasomantri@gmail.com", 
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2483.2120434728604!2d107.6546253!3d-6.9190446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e4e0bef1df%3A0x65b47d023385294b!2sJl.%20Cicalengka%2015%20No.2%2C%20Antapani%20Kidul%2C%20Kec.%20Antapani%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040291!5e1!3m2!1sen!2sid!4v1768292029818!5m2!1sen!2sid" 
 };
