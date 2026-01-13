@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="text-2xl font-serif font-bold text-[#991B1B]">
-          Kusuma
+          Kusuma Soemantri Putra
         </div>
 
         {/* Social Icons - Desktop */}

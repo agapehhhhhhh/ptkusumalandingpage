@@ -1,17 +1,14 @@
-import { useRef } from 'react';
-import { Monitor, Code, Smartphone, Rocket} from 'lucide-react';
+import { ShieldCheck, Clock, Eye } from 'lucide-react';
 import { SERVICES } from '../constants';
 
 const iconMap: Record<string, React.ReactNode> = {
-  'web-design': <Monitor className="w-8 h-8 text-[#991B1B]" />,
-  'web-dev': <Code className="w-8 h-8 text-[#991B1B]" />,
-  'mobile': <Smartphone className="w-8 h-8 text-[#991B1B]" />,
-  'marketing': <Rocket className="w-8 h-8 text-[#991B1B]" />,
+  'shield-check': <ShieldCheck className="w-8 h-8 text-[#991B1B]" />,
+  'clock': <Clock className="w-8 h-8 text-[#991B1B]" />,
+  'eye': <Eye className="w-8 h-8 text-[#991B1B]" />,
 };
 
 
 const Services = () => {
-    const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
     <section id="services" className="py-20 bg-red-50 relative overflow-hidden">
@@ -24,19 +21,14 @@ const Services = () => {
           </h2>
         </div>
 
-        <div 
-             ref={scrollRef}
-             className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory"
-             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service, index) => (
-            <div key={service.title} className="min-w-[100%] md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1rem)] snap-start bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div key={service.title} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow hover:-translate-y-1 transform duration-300">
               <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-6 ${
-                  index % 4 === 0 ? 'bg-red-100' : 
-                  index % 4 === 1 ? 'bg-orange-100' :
-                  index % 4 === 2 ? 'bg-red-50' : 'bg-red-200'
+                  index % 3 === 0 ? 'bg-red-100' : 
+                  index % 3 === 1 ? 'bg-orange-100' : 'bg-red-50'
               }`}>
-                {iconMap[service.icon]}
+                {iconMap[service.icon] || <ShieldCheck className="w-8 h-8 text-[#991B1B]" />}
               </div>
               <h4 className="text-xl font-bold text-[#991B1B] mb-4 uppercase text-sm tracking-wider">{service.title}</h4>
               <p className="text-gray-500 text-sm leading-relaxed">

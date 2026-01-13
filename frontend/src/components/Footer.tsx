@@ -43,7 +43,7 @@ const Footer = () => {
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale opacity-80"
+                className="opacity-90"
              ></iframe>
              
           </div>
