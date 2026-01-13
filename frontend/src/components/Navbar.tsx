@@ -5,11 +5,26 @@ import { NAV_LINKS } from '../constants';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('#home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Active link logic
+      const sections = NAV_LINKS.map(link => document.querySelector(link.href));
+      const scrollPosition = window.scrollY + 100; // Offset
+
+      let current = '';
+      sections.forEach((section) => {
+         if (section instanceof HTMLElement && section.offsetTop <= scrollPosition) {
+            current = `#${section.id}`;
+         }
+      });
+      
+      if (current) setActiveLink(current);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -28,7 +43,11 @@ const Navbar = () => {
             <li key={link.href}>
               <a 
                 href={link.href} 
-                className={`text-sm font-medium ${link.label === 'Home' ? 'text-[#991B1B] font-bold border-b-2 border-[#EF4444]' : 'text-gray-500 hover:text-[#991B1B]'}`}
+                className={`text-sm font-medium transition-colors ${
+                    activeLink === link.href 
+                    ? 'text-[#991B1B] font-bold border-b-2 border-[#EF4444]' 
+                    : 'text-gray-500 hover:text-[#991B1B]'
+                }`}
               >
                 {link.label}
               </a>
@@ -46,19 +65,6 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-serif font-bold text-[#991B1B]">
           KSP
-        </div>
-
-        {/* Social Icons - Desktop */}
-        <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="p-2 border border-[#991B1B] rounded-full hover:bg-[#EF4444] hover:border-[#EF4444] transition-colors">
-            <Facebook size={18} className="text-[#991B1B] hover:text-white" />
-          </a>
-          <a href="#" className="p-2 border border-[#991B1B] rounded-full hover:bg-[#EF4444] hover:border-[#EF4444] transition-colors">
-            <Linkedin size={18} className="text-[#991B1B] hover:text-white" />
-          </a>
-          <a href="#" className="p-2 border border-[#991B1B] rounded-full hover:bg-[#EF4444] hover:border-[#EF4444] transition-colors">
-            <Instagram size={18} className="text-[#991B1B] hover:text-white" />
-          </a>
         </div>
       </div>
 
