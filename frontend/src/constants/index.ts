@@ -17,7 +17,7 @@ export const ABOUT_CONTENT = {
   highlightWord: "Outdoor",
   description1: "PT Kusuma Somantri Putra bergerak di bidang penyediaan media outdoor. Kami menghadirkan media videotron dan space iklan yang profesional, dengan pengelolaan aman dan terstruktur.",
   description2: "Fokus kami adalah memberikan layanan yang transparan dan mudah diakses, mendukung brand dan organisasi untuk menampilkan pesan mereka di ruang publik secara efektif dan terpercaya.",
-  image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop" // Professional meeting/business image
+  image: "/images/meet.jpeg" // Professional meeting/business image
 };
 
 export const SERVICES = [

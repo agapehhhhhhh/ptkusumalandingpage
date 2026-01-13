@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
         {/* Image Side */}
-        <div className="relative">
+        <div className="relative order-2 md:order-1">
            {/* Red blob background removed */}
            
            <div className="relative rounded-2xl overflow-hidden border-2 border-dashed border-[#991B1B] p-2 bg-white">
@@ -14,14 +14,14 @@ const About = () => {
                 <img  
                     src={ABOUT_CONTENT.image}
                     alt="Team meeting" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale"
                 />
              </div>
            </div>
         </div>
 
         {/* Text Side */}
-        <div>
+        <div className="order-1 md:order-2">
           <h2 className="text-4xl font-bold text-[#991B1B] mb-2">{ABOUT_CONTENT.title}</h2>
           <h3 className="text-3xl font-light text-[#991B1B] mb-6">
             {ABOUT_CONTENT.heading} <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">{ABOUT_CONTENT.highlightWord}</span>

@@ -24,7 +24,7 @@ const Hero = () => {
                 <img 
                     src={HERO_CONTENT.image}
                     alt="Team working" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale"
                 />
              </div>
            </div>
