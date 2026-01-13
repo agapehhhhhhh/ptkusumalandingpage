@@ -9,8 +9,6 @@ const iconMap: Record<string, React.ReactNode> = {
   'marketing': <Rocket className="w-8 h-8 text-[#991B1B]" />,
 };
 
-// Screenshot shows icons inside a colored circle/square container.
-// Let's use simple light backgrounds for icon containers.
 
 const Services = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
