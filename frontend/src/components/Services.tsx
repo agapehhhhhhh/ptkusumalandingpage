@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Monitor, Code, Smartphone, Rocket, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Monitor, Code, Smartphone, Rocket} from 'lucide-react';
 import { SERVICES } from '../constants';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -14,18 +14,6 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const Services = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-        const { current } = scrollRef;
-        const scrollAmount = current.offsetWidth / 2;
-        if (direction === 'left') {
-            current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        } else {
-            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-    }
-  };
 
   return (
     <section id="services" className="py-20 bg-red-50 relative overflow-hidden">
