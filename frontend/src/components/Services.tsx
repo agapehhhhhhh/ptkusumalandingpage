@@ -1,0 +1,79 @@
+import { useRef } from 'react';
+import { Monitor, Code, Smartphone, Rocket, ChevronLeft, ChevronRight } from 'lucide-react';
+import { SERVICES } from '../constants';
+
+const iconMap: Record<string, React.ReactNode> = {
+  'web-design': <Monitor className="w-8 h-8 text-[#991B1B]" />,
+  'web-dev': <Code className="w-8 h-8 text-[#991B1B]" />,
+  'mobile': <Smartphone className="w-8 h-8 text-[#991B1B]" />,
+  'marketing': <Rocket className="w-8 h-8 text-[#991B1B]" />,
+};
+
+// Screenshot shows icons inside a colored circle/square container.
+// Let's use simple light backgrounds for icon containers.
+
+const Services = () => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+        const { current } = scrollRef;
+        const scrollAmount = current.offsetWidth / 2;
+        if (direction === 'left') {
+            current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+  };
+
+  return (
+    <section id="services" className="py-20 bg-red-50 relative overflow-hidden">
+        {/* Background decorative curve */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-white rounded-l-full opacity-50 -z-10 translate-x-1/2"></div>
+
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#991B1B] mb-2">What We Do</h2>
+          <h3 className="text-3xl font-light text-[#991B1B]">
+            For Your <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Business</span>
+          </h3>
+        </div>
+
+        <div 
+             ref={scrollRef}
+             className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory"
+             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {SERVICES.map((service, index) => (
+            <div key={service.title} className="min-w-[100%] md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1rem)] snap-start bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-6 ${
+                  index % 4 === 0 ? 'bg-red-100' : 
+                  index % 4 === 1 ? 'bg-orange-100' :
+                  index % 4 === 2 ? 'bg-red-50' : 'bg-red-200'
+              }`}>
+                {iconMap[service.icon]}
+              </div>
+              <h4 className="text-xl font-bold text-[#991B1B] mb-4 uppercase text-sm tracking-wider">{service.title}</h4>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        
+        {/* Slider Controls */}
+        <div className="flex justify-center mt-4 gap-4">
+            <button onClick={() => scroll('left')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
+                <ChevronLeft size={24} />
+            </button>
+            <button onClick={() => scroll('right')} className="p-3 rounded-full border border-gray-300 hover:bg-[#EF4444] hover:border-[#EF4444] group bg-white hover:text-white transition-colors">
+                <ChevronRight size={24} />
+            </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
