@@ -1,12 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Facebook, Linkedin, Instagram, Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 px-6 md:px-12 py-6 max-w-7xl left-0 right-0 mx-auto">
+    <nav className={`fixed top-0 z-50 px-6 md:px-12 transition-all duration-300 left-0 right-0 mx-auto ${
+      isScrolled 
+        ? 'py-4 bg-white/90 backdrop-blur-md shadow-lg max-w-7xl rounded-b-3xl' 
+        : 'py-6 bg-transparent w-full max-w-7xl'
+    }`}>
       <div className="flex items-center justify-between">
         
         {/* Desktop Menu */}
@@ -32,7 +45,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="text-2xl font-serif font-bold text-[#991B1B]">
-          Kusuma Soemantri Putra
+          KSP
         </div>
 
         {/* Social Icons - Desktop */}

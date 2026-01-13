@@ -17,7 +17,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-light text-[#991B1B]">
-           Our <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Advantages</span>
+           <span className="font-bold" >Our</span> <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">Advantages</span>
           </h2>
         </div>
 

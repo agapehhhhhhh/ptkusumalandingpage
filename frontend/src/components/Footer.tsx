@@ -26,9 +26,11 @@ const Footer = () => {
                     SEND
                 </button>
             </div>
-            {/* Added email display directly */}
             <p className="mt-4 text-red-100 text-sm">
                 Or email us: {FOOTER_CONTENT.email}
+            </p>
+            <p className="mt-4 text-red-100 text-sm">
+                Or Call/Message us: {FOOTER_CONTENT.phone}
             </p>
           </div>
           

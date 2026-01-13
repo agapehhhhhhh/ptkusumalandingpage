@@ -2,16 +2,15 @@ import { ABOUT_CONTENT } from "../constants";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-visible">
-      <div className="max-w-7xl mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         
         {/* Image Side */}
         <div className="relative">
-           {/* Red blob background */}
-           <div className="absolute -top-10 -left-10 w-[110%] h-[110%] bg-[#EF4444] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] -z-10"></div>
+           {/* Red blob background removed */}
            
-           <div className="relative rounded-[50%_50%_50%_50%/60%_60%_40%_40%] overflow-hidden border-2 border-dashed border-[#991B1B] p-2 bg-white">
-             <div className="rounded-[50%_50%_50%_50%/60%_60%_40%_40%] overflow-hidden bg-gray-200 h-[25rem]">
+           <div className="relative rounded-2xl overflow-hidden border-2 border-dashed border-[#991B1B] p-2 bg-white">
+             <div className="rounded-xl overflow-hidden bg-gray-200 h-[25rem]">
                 <img  
                     src={ABOUT_CONTENT.image}
                     alt="Team meeting" 
@@ -35,10 +34,7 @@ const About = () => {
           <p className="text-gray-600 mb-8">
             {ABOUT_CONTENT.description2}
           </p>
-          
-          <button className="bg-[#991B1B] text-white px-8 py-3 rounded font-bold hover:bg-opacity-90 transition-colors">
-            {ABOUT_CONTENT.buttonText}
-          </button>
+
         </div>
 
       </div>
