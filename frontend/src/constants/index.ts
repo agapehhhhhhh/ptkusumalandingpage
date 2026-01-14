@@ -61,7 +61,7 @@ export const RECENT_WORK = [
 
 export const FOOTER_CONTENT = {
   companyName: "PT Kusuma Somantri Putra",
-  description: "Penyedia dan Pengelola Media Videotron di Kota Bandung. Menjadi partner terpercaya dalam penyediaan media outdoor yang efektif, profesional, dan mudah diakses.",
+  description: "Menghubungkan brand dan ruang publik melalui media yang aman, legal, dan profesional.",
   email: "ptkusumasomantri@gmail.com", 
   phone: "+62 821-1722-5545",
   mapUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2483.2120434728604!2d107.6546253!3d-6.9190446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e4e0bef1df%3A0x65b47d023385294b!2sJl.%20Cicalengka%2015%20No.2%2C%20Antapani%20Kidul%2C%20Kec.%20Antapani%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040291!5e1!3m2!1sen!2sid!4v1768292029818!5m2!1sen!2sid" 
