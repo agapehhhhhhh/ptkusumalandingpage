@@ -6,24 +6,22 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_CONTENT = {
-  title: "Penyedia dan Pengelola Media Videotron", 
-  subtitle: "Menjadi partner terpercaya dalam penyediaan media outdoor yang efektif, profesional, dan mudah diakses.",
-  image: "/images/brochure (1).png"
+  title: "Penyedia dan pengelola media reklame serta konstruksi", 
+  subtitle: "Menghubungkan brand dan ruang publik melalui media yang aman, legal, dan profesional",
+  image: "/images/GAMBAR.jpeg"
 };
 
 export const ABOUT_CONTENT = {
   title: "About Us", 
-  heading: "Partner Terpercaya Media",
-  highlightWord: "Outdoor",
-  description1: "PT Kusuma Somantri Putra bergerak di bidang penyediaan media outdoor. Kami menghadirkan media videotron dan space iklan yang profesional, dengan pengelolaan aman dan terstruktur.",
-  description2: "Fokus kami adalah memberikan layanan yang transparan dan mudah diakses, mendukung brand dan organisasi untuk menampilkan pesan mereka di ruang publik secara efektif dan terpercaya.",
-  image: "/images/meet.jpeg" // Professional meeting/business image
+  description1: "PT Kusuma Somantri Putra merupakan perusahaan berbadan hukum Perseroan Terbatas (PT) yang bergerak di bidang penyediaan dan pengelolaan media reklame, serta pekerjaan konstruksi pendukung ruang publik.",
+  description2: "Kami menyediakan media outdoor dan indoor seperti videotron, serta layanan branding development meliputi Neon Box, Huruf Timbul, Acrylic, dan produk pendukung lainnya seperti ACP Board, Stainless, serta berbagai produk custom. Seluruh layanan dikelola secara aman, profesional, dan terstruktur.",
+  image: "/images/meet.jpeg"
 };
 
 export const SERVICES = [
   {
     title: 'Profesional & Aman',
-    description: 'Penayangan iklan dikelola secara profesional dengan standar operasional yang jelas, memastikan media tetap aman dan terawat.',
+    description: 'Penayangan media dikelola dengan standar operasional yang jelas, memperhatikan aspek keselamatan, teknis, dan kepatuhan regulasi.',
     icon: 'shield-check', 
   },
   {
@@ -41,11 +39,11 @@ export const SERVICES = [
 // Placeholder for now as the brochure does not contain specific testimonials
 export const TESTIMONIALS = [
   {
-    quote: "Menjadi partner terpercaya dalam penyediaan media outdoor yang efektif, profesional, dan mudah diakses.",
+    quote: "Menjadi perusahaan penyedia dan pengelola media reklame serta konstruksi pendukung ruang publik yang terpercaya dan profesional.",
     author: "Vision",
   },
   {
-    quote: "Menyediakan media outdoor yang berkualitas dan mudah dijangkau, dengan pengelolaan tayangan yang aman, profesional, dan transparan. Kami berkomitmen mendukung brand dan organisasi dalam menampilkan pesan secara efektif di ruang publik.",
+    quote: "Menyediakan media outdoor dan indoor yang aman, legal, dan berkualitas, serta mengelola penayangan iklan secara terencana, transparan, dan profesional. Kami mendukung brand dan organisasi dalam menyampaikan pesan secara efektif di ruang publik dengan mengutamakan kepatuhan regulasi dan standar operasional yang jelas.",
     author: "Mission",
   },
 ];

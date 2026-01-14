@@ -23,9 +23,6 @@ const About = () => {
         {/* Text Side */}
         <div className="order-1 md:order-2">
           <h2 className="text-4xl font-bold text-[#991B1B] mb-2">{ABOUT_CONTENT.title}</h2>
-          <h3 className="text-3xl font-light text-[#991B1B] mb-6">
-            {ABOUT_CONTENT.heading} <span className="underline decoration-[#EF4444] decoration-4 underline-offset-4">{ABOUT_CONTENT.highlightWord}</span>
-          </h3>
           
           <p className="text-gray-600 mb-6">
             {ABOUT_CONTENT.description1}
