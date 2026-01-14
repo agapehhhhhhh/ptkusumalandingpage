@@ -14,24 +14,35 @@ const Footer = () => {
               {FOOTER_CONTENT.description}
             </p>
             
-            <h3 className="text-white font-bold tracking-widest mb-4 text-sm">GET IN TOUCH</h3>
+            <h3 className="text-white font-bold tracking-widest mb-6 text-sm">CONTACT US</h3>
             
-            <div className="flex flex-col sm:flex-row gap-0">
-                <input 
-                    type="email" 
-                    placeholder="ENTER YOUR EMAIL" 
-                    className="bg-[#7F1D1D] border border-red-800 text-white px-6 py-4 outline-none placeholder-red-300 flex-grow"
-                />
-                <button className="bg-white text-[#991B1B] px-8 py-4 font-bold tracking-widest hover:bg-gray-100 transition-colors">
-                    SEND
-                </button>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a 
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${FOOTER_CONTENT.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-white text-[#991B1B] px-8 py-4 font-bold tracking-widest hover:bg-gray-100 transition-colors rounded text-center"
+                >
+                    EMAIL US
+                </a>
+                <a 
+                    href={`https://wa.me/${FOOTER_CONTENT.phone.replace(/[^0-9]/g, '')}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block border-2 border-white text-white px-8 py-4 font-bold tracking-widest hover:bg-white/10 transition-colors rounded text-center"
+                >
+                    WHATSAPP
+                </a>
             </div>
-            <p className="mt-4 text-red-100 text-sm">
-                Or email us: {FOOTER_CONTENT.email}
-            </p>
-            <p className="mt-4 text-red-100 text-sm">
-                Or Call/Message us: {FOOTER_CONTENT.phone}
-            </p>
+
+            <div className="space-y-2 text-red-100 text-sm">
+                <p>
+                    <strong>Email:</strong> {FOOTER_CONTENT.email}
+                </p>
+                <p>
+                    <strong>Phone:</strong> {FOOTER_CONTENT.phone}
+                </p>
+            </div>
           </div>
           
           {/* Right Side: Map */}
