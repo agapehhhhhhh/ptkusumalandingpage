@@ -18,7 +18,7 @@ const Footer = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a 
-                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${FOOTER_CONTENT.email}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=0&to=${FOOTER_CONTENT.email}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-white text-[#991B1B] px-8 py-4 font-bold tracking-widest hover:bg-gray-100 transition-colors rounded text-center"
